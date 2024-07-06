@@ -13,6 +13,9 @@ RUN npm install
 # Build the application
 RUN npm run build
 
+# Copy the config.xml file into the Docker image
+COPY config.yml ./
+
 # Make port 8080 available to the outside world
 EXPOSE 5000
 
